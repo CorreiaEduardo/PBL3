@@ -11,7 +11,11 @@ public class frmMainScreen extends javax.swing.JFrame {
 
     public frmMainScreen() {
         initComponents();
-        ControlBar.setBackground(new Color(45, 45, 45, 155));
+        ControlBar.setBackground(new Color(45, 45, 45, 170));
+        Widget1.setBackground(new Color(45, 45, 45, 210));
+        Widget2.setBackground(new Color(45, 45, 45, 210));
+        Widget3.setBackground(new Color(45, 45, 45, 210));
+        Widget4.setBackground(new Color(45, 45, 45, 210));
     }
 
     /**
@@ -29,6 +33,17 @@ public class frmMainScreen extends javax.swing.JFrame {
         btnFechar = new javax.swing.JLabel();
         btnMinimizar = new javax.swing.JLabel();
         Widget1 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        Widget2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        Widget3 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        Widget4 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -104,15 +119,155 @@ public class frmMainScreen extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Workstation_64px_1.png"))); // NOI18N
+
+        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel6.setText("DESKTOP");
+
         javax.swing.GroupLayout Widget1Layout = new javax.swing.GroupLayout(Widget1);
         Widget1.setLayout(Widget1Layout);
         Widget1Layout.setHorizontalGroup(
             Widget1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 99, Short.MAX_VALUE)
+            .addGroup(Widget1Layout.createSequentialGroup()
+                .addGroup(Widget1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Widget1Layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(jLabel4))
+                    .addGroup(Widget1Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel6)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         Widget1Layout.setVerticalGroup(
             Widget1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 93, Short.MAX_VALUE)
+            .addGroup(Widget1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addGap(5, 5, 5)
+                .addComponent(jLabel6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        Widget2.setBackground(new java.awt.Color(45, 45, 45));
+        Widget2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                Widget2MouseDragged(evt);
+            }
+        });
+        Widget2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Widget2MousePressed(evt);
+            }
+        });
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Laptop_64px_1.png"))); // NOI18N
+
+        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel7.setText("NOTEBOOK");
+
+        javax.swing.GroupLayout Widget2Layout = new javax.swing.GroupLayout(Widget2);
+        Widget2.setLayout(Widget2Layout);
+        Widget2Layout.setHorizontalGroup(
+            Widget2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Widget2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(23, 23, 23))
+            .addGroup(Widget2Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel7)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        Widget2Layout.setVerticalGroup(
+            Widget2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Widget2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+
+        Widget3.setBackground(new java.awt.Color(45, 45, 45));
+        Widget3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                Widget3MouseDragged(evt);
+            }
+        });
+        Widget3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Widget3MousePressed(evt);
+            }
+        });
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Android_Tablet_64px_1.png"))); // NOI18N
+
+        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel8.setText("TABLET");
+
+        javax.swing.GroupLayout Widget3Layout = new javax.swing.GroupLayout(Widget3);
+        Widget3.setLayout(Widget3Layout);
+        Widget3Layout.setHorizontalGroup(
+            Widget3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Widget3Layout.createSequentialGroup()
+                .addGroup(Widget3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Widget3Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel5))
+                    .addGroup(Widget3Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel8)))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        Widget3Layout.setVerticalGroup(
+            Widget3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Widget3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addGap(2, 2, 2)
+                .addComponent(jLabel8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        Widget4.setBackground(new java.awt.Color(45, 45, 45));
+        Widget4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                Widget4MouseDragged(evt);
+            }
+        });
+        Widget4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Widget4MousePressed(evt);
+            }
+        });
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_iPhone_64px_1.png"))); // NOI18N
+
+        jLabel9.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel9.setText("SMARTPHONE");
+
+        javax.swing.GroupLayout Widget4Layout = new javax.swing.GroupLayout(Widget4);
+        Widget4.setLayout(Widget4Layout);
+        Widget4Layout.setHorizontalGroup(
+            Widget4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Widget4Layout.createSequentialGroup()
+                .addContainerGap(13, Short.MAX_VALUE)
+                .addGroup(Widget4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Widget4Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(23, 23, 23))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Widget4Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(12, 12, 12))))
+        );
+        Widget4Layout.setVerticalGroup(
+            Widget4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Widget4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addGap(3, 3, 3)
+                .addComponent(jLabel9)
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -121,9 +276,15 @@ public class frmMainScreen extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(ControlBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(Widget1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addGap(19, 19, 19)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Widget1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Widget3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Widget2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Widget4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, Short.MAX_VALUE))
         );
@@ -131,11 +292,17 @@ public class frmMainScreen extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(ControlBar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(113, 113, 113)
-                .addComponent(Widget1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 284, Short.MAX_VALUE))
+                .addGap(82, 82, 82)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Widget1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Widget2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Widget4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Widget3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(189, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 520, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 539, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
@@ -170,6 +337,30 @@ public class frmMainScreen extends javax.swing.JFrame {
     private void Widget1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget1MousePressed
         // TODO add your handling code here:
     }//GEN-LAST:event_Widget1MousePressed
+
+    private void Widget2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget2MouseDragged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Widget2MouseDragged
+
+    private void Widget2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget2MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Widget2MousePressed
+
+    private void Widget3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget3MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Widget3MousePressed
+
+    private void Widget3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget3MouseDragged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Widget3MouseDragged
+
+    private void Widget4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget4MouseDragged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Widget4MouseDragged
+
+    private void Widget4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget4MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Widget4MousePressed
 
     /**
      * @param args the command line arguments
@@ -212,9 +403,20 @@ public class frmMainScreen extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ControlBar;
     private javax.swing.JPanel Widget1;
+    private javax.swing.JPanel Widget2;
+    private javax.swing.JPanel Widget3;
+    private javax.swing.JPanel Widget4;
     private javax.swing.JLabel btnFechar;
     private javax.swing.JLabel btnMinimizar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
