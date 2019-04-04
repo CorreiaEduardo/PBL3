@@ -151,6 +151,11 @@ public class frmMainScreen extends javax.swing.JFrame {
 
         Widget2.setBackground(new java.awt.Color(45, 45, 45));
         Widget2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Widget2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Widget2MouseClicked(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Laptop_64px_1.png"))); // NOI18N
 
@@ -183,6 +188,11 @@ public class frmMainScreen extends javax.swing.JFrame {
 
         Widget3.setBackground(new java.awt.Color(45, 45, 45));
         Widget3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Widget3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Widget3MouseClicked(evt);
+            }
+        });
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Android_Tablet_64px_1.png"))); // NOI18N
 
@@ -320,6 +330,38 @@ public class frmMainScreen extends javax.swing.JFrame {
         novaTela.setLocationRelativeTo(null);
         novaTela.setVisible(true);
     }//GEN-LAST:event_Widget1MouseClicked
+
+    private void Widget2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget2MouseClicked
+        Notebook n = new Notebook();
+        this.setVisible(false);
+        frmNotebookScreen novaTela = new frmNotebookScreen(
+                (p1.getSize()*n.renderizar(p1)),
+                (list1.getSize()*n.renderizar(list1)),
+                (l1.getSize()*n.renderizar(l1)),
+                p1.getColor(),
+                list1.getColor(),
+                l1.getColor()
+        );
+        novaTela.pack();
+        novaTela.setLocationRelativeTo(null);
+        novaTela.setVisible(true);
+    }//GEN-LAST:event_Widget2MouseClicked
+
+    private void Widget3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget3MouseClicked
+        Tablet t = new Tablet();
+        this.setVisible(false);
+        frmTabletScreen novaTela = new frmTabletScreen(
+                (p1.getSize()*t.renderizar(p1)),
+                (list1.getSize()*t.renderizar(list1)),
+                (l1.getSize()*t.renderizar(l1)),
+                p1.getColor(),
+                list1.getColor(),
+                l1.getColor()
+        );
+        novaTela.pack();
+        novaTela.setLocationRelativeTo(null);
+        novaTela.setVisible(true);
+    }//GEN-LAST:event_Widget3MouseClicked
 
     /**
      * @param args the command line arguments
