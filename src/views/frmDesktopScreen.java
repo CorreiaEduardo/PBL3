@@ -16,7 +16,7 @@ import javax.swing.Timer;
  */
 public class frmDesktopScreen extends javax.swing.JFrame {
 
-    public frmDesktopScreen(int pSize, int liSize, int linkSize) {
+    public frmDesktopScreen(int pSize, int liSize, int linkSize, String pColor, String liColor, String linkColor) {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("Joogle.png")).getImage());
         Timer every10millis; 
@@ -32,23 +32,23 @@ public class frmDesktopScreen extends javax.swing.JFrame {
             }
         });
         every10millis.start();
-        listLabel.setText("<HTML><or><li>Eget nunc lobortis mattis aliquam.<li>Varius quam quisque id diam vel quam elementum.<li>Cursus in hac habitasse platea dictumst quisque.");
-        Link1.setText("<HTML><U>CLICK ME");
-        LoremIpsum.setText("<html>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        listLabel.setText("<HTML><ol style='color: "+liColor+";'><li>Eget nunc lobortis mattis aliquam.<li>Varius quam quisque id diam vel quam elementum.<li>Cursus in hac habitasse platea dictumst quisque.");
+        Link1.setText("<HTML><font color='"+linkColor+"'><U>CLICK ME");
+        LoremIpsum.setText("<html> <font color='"+pColor+"'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
                 + "Sit amet volutpat consequat mauris nunc. Ornare quam viverra orci sagittis. Aliquam id diam maecenas ultricies mi eget mauris pharetra."
                 + "Elementum sagittis vitae et leo duis ut diam quam. Neque ornare aenean euismod elementum nisi quis eleifend. "
                 + "Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Dui sapien eget mi proin. Ut tristique et egestas quis ipsum. "
                 + "Viverra tellus in hac habitasse platea dictumst vestibulum." );
-        int liWidth;
-        int liHeight;
-        int linkWidth;
-        int linkHeight;
-        int pWidth = (LoremIpsum.getWidth()*pSize)/100;
-        int pHeight = (LoremIpsum.getHeight()*pSize)/100;
-        LoremIpsum.setFont(new Font(LoremIpsum.getFont().getName(), LoremIpsum.getFont().getStyle(), (LoremIpsum.getFont().getSize()*pSize)/100));
-        listLabel.setFont(new Font(listLabel.getFont().getName(), listLabel.getFont().getStyle(), (listLabel.getFont().getSize()*liSize)/100));
-        Link1.setFont(new Font(Link1.getFont().getName(), Link1.getFont().getStyle(), (Link1.getFont().getSize()*linkSize)/100));
-        LoremIpsum.setPreferredSize(new Dimension(pWidth,pHeight));
+//        int liWidth;
+//        int liHeight;
+//        int linkWidth;
+//        int linkHeight;
+        //int pWidth = (LoremIpsum.getWidth()*pSize)/100;
+        //int pHeight = (LoremIpsum.getHeight()*pSize)/100;
+        LoremIpsum.setFont(new Font(LoremIpsum.getFont().getName(), LoremIpsum.getFont().getStyle(), (LoremIpsum.getFont().getSize()*pSize)));
+        listLabel.setFont(new Font(listLabel.getFont().getName(), listLabel.getFont().getStyle(), (listLabel.getFont().getSize()*liSize)));
+        Link1.setFont(new Font(Link1.getFont().getName(), Link1.getFont().getStyle(), (Link1.getFont().getSize()*linkSize)));
+        //LoremIpsum.setPreferredSize(new Dimension(pWidth,pHeight));
         
     }
 

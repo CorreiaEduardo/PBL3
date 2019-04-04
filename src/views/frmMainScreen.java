@@ -1,6 +1,7 @@
 package views;
 
 import java.awt.Color;
+import Logics.*;
 
 /**
  * @author Edu
@@ -326,8 +327,16 @@ public class frmMainScreen extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                //frmMainScreen novaTela = new frmMainScreen();
-                frmDesktopScreen novaTela = new frmDesktopScreen(150, 100 ,120);
+                Paragrafo p1 = new Paragrafo();
+                p1.setSize(1);
+                p1.setColor("orange");
+                Lista list1 = new Lista();
+                list1.setSize(1);
+                list1.setColor("red");
+                Link l1 = new Link();
+                l1.setSize(1);
+                l1.setColor("blue");
+                frmDesktopScreen novaTela = new frmDesktopScreen(p1.getSize(), list1.getSize() ,l1.getSize(), p1.getColor(), list1.getColor(),l1.getColor());
                 novaTela.pack();
                 novaTela.setLocationRelativeTo(null);
                 novaTela.setVisible(true);
