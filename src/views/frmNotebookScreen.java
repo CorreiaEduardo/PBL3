@@ -33,8 +33,8 @@ public class frmNotebookScreen extends javax.swing.JFrame {
         });
         every10millis.start();
         listLabel.setText("<HTML><ol style='color: "+liColor+"; font-size: "+liSize+"px;'><li>Eget nunc lobortis mattis aliquam.<li>Varius quam quisque id diam vel quam elementum.<li>Cursus in hac habitasse platea dictumst quisque.");
-        Link1.setText("<HTML><font color='"+linkColor+" font-size: "+linkSize+"px;'><U>CLICK ME");
-        LoremIpsum.setText("<html> <p style= 'color: "+pColor+"; font-size: "+pSize+"px;'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        Link1.setText("<HTML><p style= 'color: "+linkColor+"; font-size: "+linkSize+"px;'><U>CLICK ME");
+        LoremIpsum.setText("<html> <p align=\"justify\" style= 'color: "+pColor+"; font-size: "+pSize+"px;'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
                 + "Sit amet volutpat consequat mauris nunc. Ornare quam viverra orci sagittis. Aliquam id diam maecenas ultricies mi eget mauris pharetra."
                 + "Elementum sagittis vitae et leo duis ut diam quam. Neque ornare aenean euismod elementum nisi quis eleifend. "
                 + "Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Dui sapien eget mi proin. Ut tristique et egestas quis ipsum. "
@@ -65,30 +65,28 @@ public class frmNotebookScreen extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jProgressBar1 = new javax.swing.JProgressBar();
-        LoremIpsum = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         Link1 = new javax.swing.JLabel();
         listLabel = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
+        jPanel5 = new javax.swing.JPanel();
+        LoremIpsum = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Joogle Jhrome");
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                JFrameWindowClosing(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(85, 85, 85));
 
         jTabbedPane1.setFocusable(false);
 
         jPanel2.setBackground(new java.awt.Color(85, 98, 113));
-
-        LoremIpsum.setBackground(new java.awt.Color(255, 255, 255));
-        LoremIpsum.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        LoremIpsum.setForeground(new java.awt.Color(204, 204, 204));
-        LoremIpsum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LoremIpsum.setText("LOREM IPSUM PARAGRAPH");
 
         jPanel4.setBackground(new java.awt.Color(255, 153, 0));
 
@@ -128,9 +126,30 @@ public class frmNotebookScreen extends javax.swing.JFrame {
         listLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         listLabel.setText("LIST");
 
-        jSeparator1.setBackground(new java.awt.Color(255, 153, 51));
-        jSeparator1.setForeground(new java.awt.Color(255, 153, 51));
-        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel5.setBackground(new java.awt.Color(255, 153, 0));
+
+        LoremIpsum.setBackground(new java.awt.Color(255, 255, 255));
+        LoremIpsum.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        LoremIpsum.setForeground(new java.awt.Color(204, 204, 204));
+        LoremIpsum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LoremIpsum.setText("LOREM IPSUM PARAGRAPH");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(LoremIpsum, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(LoremIpsum, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -139,37 +158,28 @@ public class frmNotebookScreen extends javax.swing.JFrame {
             .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addComponent(LoremIpsum, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(106, 106, 106)
                 .addComponent(listLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Link1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(199, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(148, 148, 148)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(listLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(242, 242, 242)
-                                .addComponent(Link1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(LoremIpsum, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(65, 65, 65)))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(54, 54, 54))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(142, 142, 142)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Link1)
+                            .addComponent(listLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -218,6 +228,13 @@ public class frmNotebookScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void JFrameWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_JFrameWindowClosing
+        frmMainScreen novaTela = new frmMainScreen();
+        novaTela.pack();
+        novaTela.setLocationRelativeTo(null);
+        novaTela.setVisible(true);
+    }//GEN-LAST:event_JFrameWindowClosing
+
     /**
      * @param args the command line arguments
      */
@@ -263,8 +280,8 @@ public class frmNotebookScreen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JProgressBar jProgressBar1;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel listLabel;
     // End of variables declaration//GEN-END:variables
