@@ -16,7 +16,7 @@ import javax.swing.Timer;
  */
 public class frmDesktopScreen extends javax.swing.JFrame {
 
-    public frmDesktopScreen(int pSize, int liSize, int linkSize, String pColor, String liColor, String linkColor) {
+    public frmDesktopScreen(float pSize, float liSize, float linkSize, String pColor, String liColor, String linkColor) {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("Joogle.png")).getImage());
         Timer every10millis; 
@@ -32,9 +32,9 @@ public class frmDesktopScreen extends javax.swing.JFrame {
             }
         });
         every10millis.start();
-        listLabel.setText("<HTML><ol style='color: "+liColor+";'><li>Eget nunc lobortis mattis aliquam.<li>Varius quam quisque id diam vel quam elementum.<li>Cursus in hac habitasse platea dictumst quisque.");
-        Link1.setText("<HTML><font color='"+linkColor+"'><U>CLICK ME");
-        LoremIpsum.setText("<html> <font color='"+pColor+"'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        listLabel.setText("<HTML><ol style='color: "+liColor+"; font-size: "+liSize+"px;'><li>Eget nunc lobortis mattis aliquam.<li>Varius quam quisque id diam vel quam elementum.<li>Cursus in hac habitasse platea dictumst quisque.");
+        Link1.setText("<HTML><font color='"+linkColor+" font-size: "+linkSize+"px;'><U>CLICK ME");
+        LoremIpsum.setText("<html> <p style= 'color: "+pColor+"; font-size: "+pSize+"px;'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
                 + "Sit amet volutpat consequat mauris nunc. Ornare quam viverra orci sagittis. Aliquam id diam maecenas ultricies mi eget mauris pharetra."
                 + "Elementum sagittis vitae et leo duis ut diam quam. Neque ornare aenean euismod elementum nisi quis eleifend. "
                 + "Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Dui sapien eget mi proin. Ut tristique et egestas quis ipsum. "
@@ -45,9 +45,9 @@ public class frmDesktopScreen extends javax.swing.JFrame {
 //        int linkHeight;
         //int pWidth = (LoremIpsum.getWidth()*pSize)/100;
         //int pHeight = (LoremIpsum.getHeight()*pSize)/100;
-        LoremIpsum.setFont(new Font(LoremIpsum.getFont().getName(), LoremIpsum.getFont().getStyle(), (LoremIpsum.getFont().getSize()*pSize)));
-        listLabel.setFont(new Font(listLabel.getFont().getName(), listLabel.getFont().getStyle(), (listLabel.getFont().getSize()*liSize)));
-        Link1.setFont(new Font(Link1.getFont().getName(), Link1.getFont().getStyle(), (Link1.getFont().getSize()*linkSize)));
+        //LoremIpsum.setFont(new Font(LoremIpsum.getFont().getName(), LoremIpsum.getFont().getStyle(), (LoremIpsum.getFont().getSize()*pSize)));
+        //listLabel.setFont(new Font(listLabel.getFont().getName(), listLabel.getFont().getStyle(), (listLabel.getFont().getSize()*liSize)));
+        //Link1.setFont(new Font(Link1.getFont().getName(), Link1.getFont().getStyle(), (Link1.getFont().getSize()*linkSize)));
         //LoremIpsum.setPreferredSize(new Dimension(pWidth,pHeight));
         
     }
@@ -128,6 +128,8 @@ public class frmDesktopScreen extends javax.swing.JFrame {
         listLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         listLabel.setText("LIST");
 
+        jSeparator1.setBackground(new java.awt.Color(255, 153, 51));
+        jSeparator1.setForeground(new java.awt.Color(255, 153, 51));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -139,34 +141,37 @@ public class frmDesktopScreen extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(96, 96, 96)
                 .addComponent(LoremIpsum, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 210, Short.MAX_VALUE)
+                .addGap(34, 34, 34)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(145, 145, 145)
+                .addGap(18, 18, 18)
                 .addComponent(listLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(Link1)
-                .addGap(400, 400, 400))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Link1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(109, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(87, 87, 87)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(LoremIpsum, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(listLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(Link1)
-                                .addGap(256, 256, 256))
+                                .addComponent(listLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(205, 205, 205))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(95, 95, 95)))))
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(67, 67, 67))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(87, 87, 87)
+                                .addComponent(LoremIpsum, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(395, 395, 395)
+                                .addComponent(Link1)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -179,7 +184,7 @@ public class frmDesktopScreen extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1798, Short.MAX_VALUE)
+            .addGap(0, 1278, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,7 +197,9 @@ public class frmDesktopScreen extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

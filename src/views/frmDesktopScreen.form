@@ -45,7 +45,10 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jTabbedPane1" min="-2" pref="1280" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -84,13 +87,13 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
                           <Component id="LoremIpsum" min="-2" pref="523" max="-2" attributes="0"/>
-                          <EmptySpace pref="210" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                           <Component id="jSeparator1" min="-2" pref="50" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="listLabel" min="-2" pref="316" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="Link1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="400" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="Link1" min="-2" pref="120" max="-2" attributes="0"/>
+                          <EmptySpace pref="109" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -99,26 +102,31 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jProgressBar1" min="-2" pref="9" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="LoremIpsum" alignment="3" min="-2" pref="483" max="-2" attributes="0"/>
-                                      <Component id="listLabel" alignment="3" min="-2" pref="181" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace pref="105" max="32767" attributes="0"/>
-                              </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="71" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="Link1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="256" max="-2" attributes="0"/>
+                                          <Component id="listLabel" min="-2" pref="317" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="205" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="jSeparator1" min="-2" pref="442" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                                          <Component id="jSeparator1" min="-2" pref="537" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+                                          <Component id="LoremIpsum" min="-2" pref="483" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="395" max="-2" attributes="0"/>
+                                          <Component id="Link1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
@@ -218,6 +226,12 @@
                 </Component>
                 <Component class="javax.swing.JSeparator" name="jSeparator1">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="99" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="99" red="ff" type="rgb"/>
+                    </Property>
                     <Property name="orientation" type="int" value="1"/>
                   </Properties>
                 </Component>
@@ -241,7 +255,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1798" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1278" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">

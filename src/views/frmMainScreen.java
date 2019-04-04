@@ -110,6 +110,11 @@ public class frmMainScreen extends javax.swing.JFrame {
 
         Widget1.setBackground(new java.awt.Color(45, 45, 45));
         Widget1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Widget1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Widget1MouseClicked(evt);
+            }
+        });
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Workstation_64px_1.png"))); // NOI18N
 
@@ -297,6 +302,32 @@ public class frmMainScreen extends javax.swing.JFrame {
         this.setState(this.ICONIFIED);
     }//GEN-LAST:event_btnMinimizarMouseClicked
 
+    private void Widget1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget1MouseClicked
+        Paragrafo p1 = new Paragrafo();
+        p1.setSize(5f);
+        p1.setColor("black");
+        Lista list1 = new Lista();
+        list1.setSize(5f);
+        list1.setColor("black");
+        Link l1 = new Link();
+        l1.setSize(5f);
+        l1.setColor("black");
+        Desktop d = new Desktop();
+        this.setVisible(false);
+        frmDesktopScreen novaTela = new frmDesktopScreen(
+                (p1.getSize()*d.renderizar(p1)),
+                (list1.getSize()*d.renderizar(list1)),
+                (l1.getSize()*d.renderizar(l1)),
+                p1.getColor(),
+                list1.getColor(),
+                l1.getColor()
+        );
+        //frmDesktopScreen novaTela = new frmDesktopScreen(p1.getSize(), list1.getSize() ,l1.getSize(), p1.getColor(), list1.getColor(),l1.getColor());
+        novaTela.pack();
+        novaTela.setLocationRelativeTo(null);
+        novaTela.setVisible(true);
+    }//GEN-LAST:event_Widget1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -327,16 +358,8 @@ public class frmMainScreen extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Paragrafo p1 = new Paragrafo();
-                p1.setSize(1);
-                p1.setColor("orange");
-                Lista list1 = new Lista();
-                list1.setSize(1);
-                list1.setColor("red");
-                Link l1 = new Link();
-                l1.setSize(1);
-                l1.setColor("blue");
-                frmDesktopScreen novaTela = new frmDesktopScreen(p1.getSize(), list1.getSize() ,l1.getSize(), p1.getColor(), list1.getColor(),l1.getColor());
+                frmMainScreen novaTela = new frmMainScreen();
+                //frmDesktopScreen novaTela = new frmDesktopScreen(p1.getSize(), list1.getSize() ,l1.getSize(), p1.getColor(), list1.getColor(),l1.getColor());
                 novaTela.pack();
                 novaTela.setLocationRelativeTo(null);
                 novaTela.setVisible(true);

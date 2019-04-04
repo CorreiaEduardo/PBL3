@@ -4,14 +4,14 @@ package Logics;
  * @author Eduardo C.
  */
 public class HTMLComponent {
-    private int size;
+    private float size;
     private String color;
 
-    public int getSize() {
+    public float getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(float size) {
         this.size = size;
     }
 

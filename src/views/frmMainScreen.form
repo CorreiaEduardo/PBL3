@@ -175,6 +175,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Widget1MouseClicked"/>
+          </Events>
 
           <Layout>
             <DimensionLayout dim="0">
