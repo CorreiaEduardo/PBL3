@@ -9,7 +9,9 @@ import Logics.*;
 public class frmMainScreen extends javax.swing.JFrame {
     int xMouse;
     int yMouse;
-
+    static Paragrafo p1;
+    static Lista list1;
+    static Link l1;
     public frmMainScreen() {
         initComponents();
         ControlBar.setBackground(new Color(45, 45, 45, 170));
@@ -17,6 +19,7 @@ public class frmMainScreen extends javax.swing.JFrame {
         Widget2.setBackground(new Color(45, 45, 45, 210));
         Widget3.setBackground(new Color(45, 45, 45, 210));
         Widget4.setBackground(new Color(45, 45, 45, 210));
+        
     }
 
     /**
@@ -303,15 +306,6 @@ public class frmMainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMinimizarMouseClicked
 
     private void Widget1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget1MouseClicked
-        Paragrafo p1 = new Paragrafo();
-        p1.setSize(5f);
-        p1.setColor("black");
-        Lista list1 = new Lista();
-        list1.setSize(5f);
-        list1.setColor("black");
-        Link l1 = new Link();
-        l1.setSize(5f);
-        l1.setColor("black");
         Desktop d = new Desktop();
         this.setVisible(false);
         frmDesktopScreen novaTela = new frmDesktopScreen(
@@ -322,7 +316,6 @@ public class frmMainScreen extends javax.swing.JFrame {
                 list1.getColor(),
                 l1.getColor()
         );
-        //frmDesktopScreen novaTela = new frmDesktopScreen(p1.getSize(), list1.getSize() ,l1.getSize(), p1.getColor(), list1.getColor(),l1.getColor());
         novaTela.pack();
         novaTela.setLocationRelativeTo(null);
         novaTela.setVisible(true);
@@ -359,10 +352,21 @@ public class frmMainScreen extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 frmMainScreen novaTela = new frmMainScreen();
-                //frmDesktopScreen novaTela = new frmDesktopScreen(p1.getSize(), list1.getSize() ,l1.getSize(), p1.getColor(), list1.getColor(),l1.getColor());
                 novaTela.pack();
                 novaTela.setLocationRelativeTo(null);
                 novaTela.setVisible(true);
+                
+                p1 = new Paragrafo();
+                p1.setSize(5f);
+                p1.setColor("black");
+                
+                list1 = new Lista();
+                list1.setSize(5f);
+                list1.setColor("black");
+                
+                l1 = new Link();
+                l1.setSize(5f);
+                l1.setColor("black");
             }
         });
     }
