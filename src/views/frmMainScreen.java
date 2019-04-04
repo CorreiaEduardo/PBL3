@@ -108,6 +108,7 @@ public class frmMainScreen extends javax.swing.JFrame {
         );
 
         Widget1.setBackground(new java.awt.Color(45, 45, 45));
+        Widget1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Widget1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 Widget1MouseDragged(evt);
@@ -123,6 +124,7 @@ public class frmMainScreen extends javax.swing.JFrame {
 
         jLabel6.setForeground(new java.awt.Color(204, 204, 204));
         jLabel6.setText("DESKTOP");
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout Widget1Layout = new javax.swing.GroupLayout(Widget1);
         Widget1.setLayout(Widget1Layout);
@@ -149,6 +151,7 @@ public class frmMainScreen extends javax.swing.JFrame {
         );
 
         Widget2.setBackground(new java.awt.Color(45, 45, 45));
+        Widget2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Widget2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 Widget2MouseDragged(evt);
@@ -164,6 +167,7 @@ public class frmMainScreen extends javax.swing.JFrame {
 
         jLabel7.setForeground(new java.awt.Color(204, 204, 204));
         jLabel7.setText("NOTEBOOK");
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout Widget2Layout = new javax.swing.GroupLayout(Widget2);
         Widget2.setLayout(Widget2Layout);
@@ -189,6 +193,7 @@ public class frmMainScreen extends javax.swing.JFrame {
         );
 
         Widget3.setBackground(new java.awt.Color(45, 45, 45));
+        Widget3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Widget3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 Widget3MouseDragged(evt);
@@ -230,6 +235,7 @@ public class frmMainScreen extends javax.swing.JFrame {
         );
 
         Widget4.setBackground(new java.awt.Color(45, 45, 45));
+        Widget4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Widget4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 Widget4MouseDragged(evt);
