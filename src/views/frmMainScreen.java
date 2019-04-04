@@ -225,6 +225,11 @@ public class frmMainScreen extends javax.swing.JFrame {
 
         Widget4.setBackground(new java.awt.Color(45, 45, 45));
         Widget4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Widget4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Widget4MouseClicked(evt);
+            }
+        });
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_iPhone_64px_1.png"))); // NOI18N
 
@@ -362,6 +367,33 @@ public class frmMainScreen extends javax.swing.JFrame {
         novaTela.setLocationRelativeTo(null);
         novaTela.setVisible(true);
     }//GEN-LAST:event_Widget3MouseClicked
+
+    private void Widget4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget4MouseClicked
+        Celular c = new Celular();
+        this.setVisible(false);
+        
+//        frmCelularScreen novaTela = new frmCelularScreen(
+//                (p1.getSize()*c.renderizar(p1)),
+//                (list1.getSize()*c.renderizar(list1)),
+//                (l1.getSize()*c.renderizar(l1)),
+//                p1.getColor(),
+//                list1.getColor(),
+//                l1.getColor()
+//        );
+        
+        frmCelularScreen novaTela = new frmCelularScreen(
+            (p1.getSize()),
+            (list1.getSize()),
+            (l1.getSize()),
+            p1.getColor(),
+            list1.getColor(),
+            l1.getColor()
+        );
+        
+        novaTela.pack();
+        novaTela.setLocationRelativeTo(null);
+        novaTela.setVisible(true);
+    }//GEN-LAST:event_Widget4MouseClicked
 
     /**
      * @param args the command line arguments
