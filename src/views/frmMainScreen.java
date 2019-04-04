@@ -109,16 +109,6 @@ public class frmMainScreen extends javax.swing.JFrame {
 
         Widget1.setBackground(new java.awt.Color(45, 45, 45));
         Widget1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Widget1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                Widget1MouseDragged(evt);
-            }
-        });
-        Widget1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Widget1MousePressed(evt);
-            }
-        });
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Workstation_64px_1.png"))); // NOI18N
 
@@ -152,16 +142,6 @@ public class frmMainScreen extends javax.swing.JFrame {
 
         Widget2.setBackground(new java.awt.Color(45, 45, 45));
         Widget2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Widget2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                Widget2MouseDragged(evt);
-            }
-        });
-        Widget2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Widget2MousePressed(evt);
-            }
-        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Laptop_64px_1.png"))); // NOI18N
 
@@ -194,16 +174,6 @@ public class frmMainScreen extends javax.swing.JFrame {
 
         Widget3.setBackground(new java.awt.Color(45, 45, 45));
         Widget3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Widget3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                Widget3MouseDragged(evt);
-            }
-        });
-        Widget3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Widget3MousePressed(evt);
-            }
-        });
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Android_Tablet_64px_1.png"))); // NOI18N
 
@@ -236,16 +206,6 @@ public class frmMainScreen extends javax.swing.JFrame {
 
         Widget4.setBackground(new java.awt.Color(45, 45, 45));
         Widget4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Widget4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                Widget4MouseDragged(evt);
-            }
-        });
-        Widget4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Widget4MousePressed(evt);
-            }
-        });
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_iPhone_64px_1.png"))); // NOI18N
 
@@ -336,38 +296,6 @@ public class frmMainScreen extends javax.swing.JFrame {
         this.setState(this.ICONIFIED);
     }//GEN-LAST:event_btnMinimizarMouseClicked
 
-    private void Widget1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget1MouseDragged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Widget1MouseDragged
-
-    private void Widget1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget1MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Widget1MousePressed
-
-    private void Widget2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget2MouseDragged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Widget2MouseDragged
-
-    private void Widget2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget2MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Widget2MousePressed
-
-    private void Widget3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget3MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Widget3MousePressed
-
-    private void Widget3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget3MouseDragged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Widget3MouseDragged
-
-    private void Widget4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget4MouseDragged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Widget4MouseDragged
-
-    private void Widget4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Widget4MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Widget4MousePressed
-
     /**
      * @param args the command line arguments
      */
@@ -398,7 +326,8 @@ public class frmMainScreen extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                frmMainScreen novaTela = new frmMainScreen();
+                //frmMainScreen novaTela = new frmMainScreen();
+                frmDesktopScreen novaTela = new frmDesktopScreen(150, 100 ,120);
                 novaTela.pack();
                 novaTela.setLocationRelativeTo(null);
                 novaTela.setVisible(true);
