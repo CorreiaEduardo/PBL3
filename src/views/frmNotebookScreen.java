@@ -1,5 +1,6 @@
 package views;
 
+import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -77,6 +78,9 @@ public class frmNotebookScreen extends javax.swing.JFrame {
         jTabbedPane1.setFocusable(false);
 
         jPanel2.setBackground(new java.awt.Color(85, 98, 113));
+        jPanel2.setLayout(null);
+        jPanel2.add(jProgressBar1);
+        jProgressBar1.setBounds(0, 0, 1364, 9);
 
         jPanel4.setBackground(new java.awt.Color(255, 153, 0));
 
@@ -110,12 +114,19 @@ public class frmNotebookScreen extends javax.swing.JFrame {
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
+        jPanel2.add(jPanel4);
+        jPanel4.setBounds(0, 642, 1364, 100);
+
         Link1.setText("CLICK ME");
         Link1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel2.add(Link1);
+        Link1.setBounds(1045, 452, 120, 30);
 
         listLabel.setForeground(new java.awt.Color(204, 204, 204));
         listLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         listLabel.setText("LIST");
+        jPanel2.add(listLabel);
+        listLabel.setBounds(723, 151, 316, 317);
 
         jPanel5.setBackground(new java.awt.Color(255, 153, 0));
 
@@ -142,37 +153,8 @@ public class frmNotebookScreen extends javax.swing.JFrame {
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(106, 106, 106)
-                .addComponent(listLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Link1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(199, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(54, 54, 54))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(142, 142, 142)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Link1)
-                            .addComponent(listLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jPanel2.add(jPanel5);
+        jPanel5.setBounds(0, 70, 617, 518);
 
         jTabbedPane1.addTab("Nova Guia Joogle", jPanel2);
 

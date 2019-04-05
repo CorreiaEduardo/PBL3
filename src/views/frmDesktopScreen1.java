@@ -15,10 +15,11 @@ import javax.swing.Timer;
 /**
  * @author Edu
  */
-public class frmDesktopScreen extends javax.swing.JFrame {
+public class frmDesktopScreen1 extends javax.swing.JFrame {
 
-    public frmDesktopScreen(float pSize, float liSize, float linkSize, String pColor, String liColor, String linkColor) {
+    public frmDesktopScreen1(float pSize, float liSize, float linkSize, String pColor, String liColor, String linkColor) {
         initComponents();
+        opacity.setBackground(new Color(45, 45, 45, 150));
         this.setIconImage(new ImageIcon(getClass().getResource("Joogle.png")).getImage());
         Timer every10millis; 
         every10millis = new Timer(10, new ActionListener() {
@@ -63,6 +64,8 @@ public class frmDesktopScreen extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         LoremIpsum = new javax.swing.JLabel();
         Link1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        opacity = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
 
@@ -160,8 +163,28 @@ public class frmDesktopScreen extends javax.swing.JFrame {
 
         jPanel2.add(jPanel5);
         jPanel5.setBounds(0, 96, 641, 534);
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(972, 38, 0, 0);
+
+        opacity.setBackground(new java.awt.Color(0, 0, 0));
+
+        javax.swing.GroupLayout opacityLayout = new javax.swing.GroupLayout(opacity);
+        opacity.setLayout(opacityLayout);
+        opacityLayout.setHorizontalGroup(
+            opacityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1280, Short.MAX_VALUE)
+        );
+        opacityLayout.setVerticalGroup(
+            opacityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 680, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(opacity);
+        opacity.setBounds(0, 10, 1280, 680);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/globe-bg.jpg"))); // NOI18N
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(0, 10, 0, 0);
+        jLabel4.setBounds(0, 0, 1280, 690);
 
         jTabbedPane1.addTab("Nova Guia Joogle", jPanel2);
 
@@ -232,14 +255,15 @@ public class frmDesktopScreen extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frmDesktopScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmDesktopScreen1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frmDesktopScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmDesktopScreen1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frmDesktopScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmDesktopScreen1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frmDesktopScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmDesktopScreen1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
@@ -253,6 +277,7 @@ public class frmDesktopScreen extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Link1;
     private javax.swing.JLabel LoremIpsum;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -264,5 +289,6 @@ public class frmDesktopScreen extends javax.swing.JFrame {
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel listLabel;
+    private javax.swing.JPanel opacity;
     // End of variables declaration//GEN-END:variables
 }

@@ -426,6 +426,7 @@ public class frmMainScreen extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 frmMainScreen novaTela = new frmMainScreen();
+                //frmDesktopScreen1 novaTela = new frmDesktopScreen1(10,10,10,"","","");
                 novaTela.pack();
                 novaTela.setLocationRelativeTo(null);
                 novaTela.setVisible(true);
