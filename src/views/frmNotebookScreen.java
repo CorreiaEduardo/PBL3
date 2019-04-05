@@ -20,26 +20,11 @@ public class frmNotebookScreen extends javax.swing.JFrame {
     public frmNotebookScreen(float pSize, float liSize, float linkSize, String pColor, String liColor, String linkColor) {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("Joogle.png")).getImage());
-        Timer every10millis; 
-        every10millis = new Timer(10, new ActionListener() {
-            private int count=0;
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                count++;
-                jProgressBar1.setValue(count);
-                if (count==100) {
-                     
-                }
-            }
-        });
-        every10millis.start();
         listLabel.setText("<HTML><ol style='color: "+liColor+"; font-size: "+liSize+"px;'><li>Eget nunc lobortis mattis aliquam.<li>Varius quam quisque id diam vel quam elementum.<li>Cursus in hac habitasse platea dictumst quisque.");
         Link1.setText("<HTML><p style= 'color: "+linkColor+"; font-size: "+linkSize+"px;'><U>CLICK ME");
         LoremIpsum.setText("<html> <p align=\"justify\" style= 'color: "+pColor+"; font-size: "+pSize+"px;'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
                 + "Sit amet volutpat consequat mauris nunc. Ornare quam viverra orci sagittis. Aliquam id diam maecenas ultricies mi eget mauris pharetra."
-                + "Elementum sagittis vitae et leo duis ut diam quam. Neque ornare aenean euismod elementum nisi quis eleifend. "
-                + "Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Dui sapien eget mi proin. Ut tristique et egestas quis ipsum. "
-                + "Viverra tellus in hac habitasse platea dictumst vestibulum." );
+                + "Elementum sagittis vitae et leo duis ut diam quam." );
         
     }
 
@@ -55,14 +40,15 @@ public class frmNotebookScreen extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        Link1 = new javax.swing.JLabel();
-        listLabel = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         LoremIpsum = new javax.swing.JLabel();
+        listLabel = new javax.swing.JLabel();
+        Link1 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
 
         setTitle("Joogle Jhrome");
@@ -77,84 +63,57 @@ public class frmNotebookScreen extends javax.swing.JFrame {
 
         jTabbedPane1.setFocusable(false);
 
-        jPanel2.setBackground(new java.awt.Color(85, 98, 113));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setLayout(null);
-        jPanel2.add(jProgressBar1);
-        jProgressBar1.setBounds(0, 0, 1364, 9);
 
-        jPanel4.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel5.setBackground(new java.awt.Color(153, 62, 0));
+        jPanel5.setLayout(new javax.swing.OverlayLayout(jPanel5));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_GitHub_64px.png"))); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel1.setText("                                                                    HOMEPAGE");
+        jPanel5.add(jLabel1);
+
+        jLabel4.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel4.setText("           LOREM IPSUM");
+        jPanel5.add(jLabel4);
+
+        jPanel2.add(jPanel5);
+        jPanel5.setBounds(0, 0, 1370, 40);
 
         jLabel3.setFont(new java.awt.Font("Franklin Gothic Book", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("CORREIAEDUARDO");
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(1040, 640, 208, 28);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(518, 518, 518)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel3)
-                        .addGap(16, 16, 16)))
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
-
-        jPanel2.add(jPanel4);
-        jPanel4.setBounds(0, 642, 1364, 100);
-
-        Link1.setText("CLICK ME");
-        Link1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(Link1);
-        Link1.setBounds(1045, 452, 120, 30);
-
-        listLabel.setForeground(new java.awt.Color(204, 204, 204));
-        listLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        listLabel.setText("LIST");
-        jPanel2.add(listLabel);
-        listLabel.setBounds(723, 151, 316, 317);
-
-        jPanel5.setBackground(new java.awt.Color(255, 153, 0));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_GitHub_64px.png"))); // NOI18N
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(970, 620, 64, 64);
 
         LoremIpsum.setBackground(new java.awt.Color(255, 255, 255));
         LoremIpsum.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         LoremIpsum.setForeground(new java.awt.Color(204, 204, 204));
         LoremIpsum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LoremIpsum.setText("LOREM IPSUM PARAGRAPH");
+        jPanel2.add(LoremIpsum);
+        LoremIpsum.setBounds(710, 60, 530, 270);
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(LoremIpsum, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(LoremIpsum, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
-        );
+        listLabel.setForeground(new java.awt.Color(204, 204, 204));
+        listLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        listLabel.setText("LIST");
+        jPanel2.add(listLabel);
+        listLabel.setBounds(710, 370, 430, 220);
 
-        jPanel2.add(jPanel5);
-        jPanel5.setBounds(0, 70, 617, 518);
+        Link1.setText("CLICK ME!");
+        Link1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel2.add(Link1);
+        Link1.setBounds(1090, 330, 200, 40);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/orangebg.png"))); // NOI18N
+        jPanel2.add(jLabel6);
+        jLabel6.setBounds(0, 36, 1370, 680);
 
         jTabbedPane1.addTab("Nova Guia Joogle", jPanel2);
 
@@ -169,7 +128,7 @@ public class frmNotebookScreen extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 742, Short.MAX_VALUE)
+            .addGap(0, 711, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("JMail", jPanel3);
@@ -183,7 +142,7 @@ public class frmNotebookScreen extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 768, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -247,14 +206,15 @@ public class frmNotebookScreen extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Link1;
     private javax.swing.JLabel LoremIpsum;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel listLabel;
     // End of variables declaration//GEN-END:variables

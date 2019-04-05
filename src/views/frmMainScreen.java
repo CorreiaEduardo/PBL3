@@ -1,5 +1,8 @@
 package views;
 
+import oldViews.frmNotebookScreen1;
+import oldViews.frmTabletScreen1;
+import oldViews.frmCelularScreen1;
 import java.awt.Color;
 import Logics.*;
 
@@ -372,7 +375,7 @@ public class frmMainScreen extends javax.swing.JFrame {
         Celular c = new Celular();
         this.setVisible(false);
         
-//        frmCelularScreen novaTela = new frmCelularScreen(
+//        frmCelularScreen1 novaTela = new frmCelularScreen1(
 //                (p1.getSize()*c.renderizar(p1)),
 //                (list1.getSize()*c.renderizar(list1)),
 //                (l1.getSize()*c.renderizar(l1)),
@@ -433,15 +436,15 @@ public class frmMainScreen extends javax.swing.JFrame {
                 
                 p1 = new Paragrafo();
                 p1.setSize(7.3f);
-                p1.setColor("black");
+                p1.setColor("white");
                 
                 list1 = new Lista();
                 list1.setSize(8f);
-                list1.setColor("orange");
+                list1.setColor("white");
                 
                 l1 = new Link();
                 l1.setSize(8f);
-                l1.setColor("black");
+                l1.setColor("white");
             }
         });
     }
