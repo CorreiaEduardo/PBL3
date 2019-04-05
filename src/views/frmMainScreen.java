@@ -431,15 +431,15 @@ public class frmMainScreen extends javax.swing.JFrame {
                 novaTela.setVisible(true);
                 
                 p1 = new Paragrafo();
-                p1.setSize(7f);
+                p1.setSize(7.3f);
                 p1.setColor("black");
                 
                 list1 = new Lista();
-                list1.setSize(7f);
-                list1.setColor("black");
+                list1.setSize(8f);
+                list1.setColor("orange");
                 
                 l1 = new Link();
-                l1.setSize(7f);
+                l1.setSize(8f);
                 l1.setColor("black");
             }
         });
