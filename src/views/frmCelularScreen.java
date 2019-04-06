@@ -6,7 +6,8 @@ import javax.swing.ImageIcon;
  * @author Edu
  */
 public class frmCelularScreen extends javax.swing.JFrame {
-
+    int xMouse;
+    int yMouse;
     public frmCelularScreen(float pSize, float liSize, float linkSize, String pColor, String liColor, String linkColor) {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("Joogle.png")).getImage());
@@ -28,7 +29,6 @@ public class frmCelularScreen extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -41,8 +41,14 @@ public class frmCelularScreen extends javax.swing.JFrame {
         Link1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
 
         setTitle("Joogle Jhrome");
+        setUndecorated(true);
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -51,8 +57,6 @@ public class frmCelularScreen extends javax.swing.JFrame {
         });
 
         jPanel1.setBackground(new java.awt.Color(85, 85, 85));
-
-        jTabbedPane1.setFocusable(false);
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setLayout(null);
@@ -115,7 +119,7 @@ public class frmCelularScreen extends javax.swing.JFrame {
         );
 
         jPanel2.add(jPanel4);
-        jPanel4.setBounds(150, 570, 190, 40);
+        jPanel4.setBounds(170, 570, 190, 40);
 
         listLabel.setForeground(new java.awt.Color(204, 204, 204));
         listLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -132,37 +136,65 @@ public class frmCelularScreen extends javax.swing.JFrame {
         jPanel2.add(jLabel6);
         jLabel6.setBounds(-370, 40, 760, 590);
 
-        jTabbedPane1.addTab("Nova Guia Joogle", jPanel2);
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setOpaque(false);
+        jPanel3.setLayout(null);
 
-        jPanel3.setBackground(new java.awt.Color(75, 75, 75));
-        jPanel3.setEnabled(false);
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Shutdown_18px_2.png"))); // NOI18N
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jLabel7);
+        jLabel7.setBounds(343, 2, 18, 20);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 368, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 626, Short.MAX_VALUE)
-        );
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barok.png"))); // NOI18N
+        jLabel11.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jLabel11MouseDragged(evt);
+            }
+        });
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel11MousePressed(evt);
+            }
+        });
+        jPanel3.add(jLabel11);
+        jLabel11.setBounds(-10, 0, 380, 24);
 
-        jTabbedPane1.addTab("JMail", jPanel3);
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Menu_Vertical_24px.png"))); // NOI18N
+        jPanel3.add(jLabel10);
+        jLabel10.setBounds(330, 30, 24, 30);
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_2_24px.png"))); // NOI18N
+        jPanel3.add(jLabel12);
+        jLabel12.setBounds(300, 30, 24, 30);
+
+        jLabel13.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel13.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("https://loremipsumpbl3.com");
+        jLabel13.setOpaque(true);
+        jPanel3.add(jLabel13);
+        jLabel13.setBounds(10, 30, 270, 30);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 652, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 623, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -185,6 +217,25 @@ public class frmCelularScreen extends javax.swing.JFrame {
         novaTela.setLocationRelativeTo(null);
         novaTela.setVisible(true);
     }//GEN-LAST:event_JFrameWindowClosing
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        this.hide();
+        frmMainScreen novaTela = new frmMainScreen();
+        novaTela.pack();
+        novaTela.setLocationRelativeTo(null);
+        novaTela.setVisible(true);
+    }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jLabel11MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MousePressed
+        xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_jLabel11MousePressed
+
+    private void jLabel11MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xMouse, y - yMouse);
+    }//GEN-LAST:event_jLabel11MouseDragged
 
     /**
      * @param args the command line arguments
@@ -228,16 +279,20 @@ public class frmCelularScreen extends javax.swing.JFrame {
     private javax.swing.JLabel Link1;
     private javax.swing.JLabel LoremIpsum;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel listLabel;
     // End of variables declaration//GEN-END:variables
 }

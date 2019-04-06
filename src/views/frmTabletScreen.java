@@ -6,7 +6,8 @@ import javax.swing.ImageIcon;
  * @author Edu
  */
 public class frmTabletScreen extends javax.swing.JFrame {
-
+    int xMouse;
+    int yMouse;
     public frmTabletScreen(float pSize, float liSize, float linkSize, String pColor, String liColor, String linkColor) {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("Joogle.png")).getImage());
@@ -28,7 +29,12 @@ public class frmTabletScreen extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -39,9 +45,9 @@ public class frmTabletScreen extends javax.swing.JFrame {
         listLabel = new javax.swing.JLabel();
         Link1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
 
         setTitle("Joogle Jhrome");
+        setUndecorated(true);
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -51,7 +57,49 @@ public class frmTabletScreen extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(85, 85, 85));
 
-        jTabbedPane1.setFocusable(false);
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setOpaque(false);
+        jPanel3.setLayout(null);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Shutdown_22px.png"))); // NOI18N
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jLabel5);
+        jLabel5.setBounds(700, 0, 30, 30);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tabbar.png"))); // NOI18N
+        jLabel11.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jLabel11MouseDragged(evt);
+            }
+        });
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel11MousePressed(evt);
+            }
+        });
+        jPanel3.add(jLabel11);
+        jLabel11.setBounds(-10, 0, 820, 30);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Menu_Vertical_24px.png"))); // NOI18N
+        jPanel3.add(jLabel10);
+        jLabel10.setBounds(730, 35, 24, 30);
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_2_24px.png"))); // NOI18N
+        jPanel3.add(jLabel12);
+        jLabel12.setBounds(700, 35, 24, 30);
+
+        jLabel13.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel13.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("https://loremipsumpbl3.com");
+        jLabel13.setOpaque(true);
+        jPanel3.add(jLabel13);
+        jLabel13.setBounds(10, 35, 680, 30);
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setLayout(null);
@@ -70,17 +118,17 @@ public class frmTabletScreen extends javax.swing.JFrame {
         jPanel5.add(jLabel4);
 
         jPanel2.add(jPanel5);
-        jPanel5.setBounds(0, 0, 1280, 40);
+        jPanel5.setBounds(0, 0, 770, 40);
 
         jLabel3.setFont(new java.awt.Font("Franklin Gothic Book", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("CORREIAEDUARDO");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(490, 670, 208, 28);
+        jLabel3.setBounds(510, 630, 208, 28);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_GitHub_64px.png"))); // NOI18N
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(420, 650, 64, 64);
+        jLabel2.setBounds(440, 610, 64, 64);
 
         LoremIpsum.setBackground(new java.awt.Color(255, 255, 255));
         LoremIpsum.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
@@ -103,37 +151,24 @@ public class frmTabletScreen extends javax.swing.JFrame {
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/orangebg.png"))); // NOI18N
         jPanel2.add(jLabel6);
-        jLabel6.setBounds(-180, 40, 940, 700);
-
-        jTabbedPane1.addTab("Nova Guia Joogle", jPanel2);
-
-        jPanel3.setBackground(new java.awt.Color(75, 75, 75));
-        jPanel3.setEnabled(false);
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 763, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 738, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("JMail", jPanel3);
+        jLabel6.setBounds(-180, 40, 950, 700);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 765, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 764, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 763, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 689, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -156,6 +191,25 @@ public class frmTabletScreen extends javax.swing.JFrame {
         novaTela.setLocationRelativeTo(null);
         novaTela.setVisible(true);
     }//GEN-LAST:event_JFrameWindowClosing
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        this.hide();
+        frmMainScreen novaTela = new frmMainScreen();
+        novaTela.pack();
+        novaTela.setLocationRelativeTo(null);
+        novaTela.setVisible(true);
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel11MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MousePressed
+        xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_jLabel11MousePressed
+
+    private void jLabel11MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xMouse, y - yMouse);
+    }//GEN-LAST:event_jLabel11MouseDragged
 
     /**
      * @param args the command line arguments
@@ -197,15 +251,19 @@ public class frmTabletScreen extends javax.swing.JFrame {
     private javax.swing.JLabel Link1;
     private javax.swing.JLabel LoremIpsum;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel listLabel;
     // End of variables declaration//GEN-END:variables
 }
