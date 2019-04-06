@@ -1,16 +1,6 @@
 package views;
 
-import java.awt.Color;
-import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-import java.util.TimerTask;
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
-import javax.swing.Timer;
 
 /**
  * @author Edu
@@ -90,7 +80,7 @@ public class frmCelularScreen extends javax.swing.JFrame {
         LoremIpsum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LoremIpsum.setText("LOREM IPSUM PARAGRAPH");
         jPanel2.add(LoremIpsum);
-        LoremIpsum.setBounds(180, 40, 180, 270);
+        LoremIpsum.setBounds(180, 60, 180, 230);
 
         jPanel4.setBackground(new java.awt.Color(0, 0, 0));
         jPanel4.setOpaque(false);
@@ -131,12 +121,12 @@ public class frmCelularScreen extends javax.swing.JFrame {
         listLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         listLabel.setText("LIST");
         jPanel2.add(listLabel);
-        listLabel.setBounds(170, 260, 180, 220);
+        listLabel.setBounds(170, 310, 180, 220);
 
         Link1.setText("CLICK ME!");
         Link1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(Link1);
-        Link1.setBounds(260, 260, 100, 40);
+        Link1.setBounds(260, 290, 100, 40);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/orangebg.png"))); // NOI18N
         jPanel2.add(jLabel6);

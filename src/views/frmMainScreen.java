@@ -375,23 +375,23 @@ public class frmMainScreen extends javax.swing.JFrame {
         Celular c = new Celular();
         this.setVisible(false);
         
-//        frmCelularScreen1 novaTela = new frmCelularScreen1(
-//                (p1.getSize()*c.renderizar(p1)),
-//                (list1.getSize()*c.renderizar(list1)),
-//                (l1.getSize()*c.renderizar(l1)),
-//                p1.getColor(),
-//                list1.getColor(),
-//                l1.getColor()
-//        );
-        
         frmCelularScreen novaTela = new frmCelularScreen(
-            (p1.getSize()),
-            (list1.getSize()),
-            (l1.getSize()),
-            p1.getColor(),
-            list1.getColor(),
-            l1.getColor()
+                (p1.getSize()*c.renderizar(p1)),
+                (list1.getSize()*c.renderizar(list1)),
+                (l1.getSize()*c.renderizar(l1)),
+                p1.getColor(),
+                list1.getColor(),
+                l1.getColor()
         );
+        
+//        frmCelularScreen novaTela = new frmCelularScreen(
+//            (p1.getSize()),
+//            (list1.getSize()),
+//            (l1.getSize()),
+//            p1.getColor(),
+//            list1.getColor(),
+//            l1.getColor()
+//        );
         
         novaTela.pack();
         novaTela.setLocationRelativeTo(null);
@@ -435,15 +435,15 @@ public class frmMainScreen extends javax.swing.JFrame {
                 novaTela.setVisible(true);
                 
                 p1 = new Paragrafo();
-                p1.setSize(7.3f);
+                p1.setSize(10f);
                 p1.setColor("white");
                 
                 list1 = new Lista();
-                list1.setSize(8f);
+                list1.setSize(10f);
                 list1.setColor("white");
                 
                 l1 = new Link();
-                l1.setSize(8f);
+                l1.setSize(10f);
                 l1.setColor("white");
             }
         });

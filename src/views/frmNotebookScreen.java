@@ -1,16 +1,6 @@
 package views;
 
-import java.awt.Color;
-import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-import java.util.TimerTask;
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
-import javax.swing.Timer;
 
 /**
  * @author Edu

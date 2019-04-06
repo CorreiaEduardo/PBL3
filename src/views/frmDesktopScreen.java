@@ -1,16 +1,6 @@
 package views;
 
-import java.awt.Color;
-import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-import java.util.TimerTask;
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
-import javax.swing.Timer;
 
 /**
  * @author Edu
@@ -98,18 +88,18 @@ public class frmDesktopScreen extends javax.swing.JFrame {
         LoremIpsum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LoremIpsum.setText("LOREM IPSUM PARAGRAPH");
         jPanel2.add(LoremIpsum);
-        LoremIpsum.setBounds(660, 80, 530, 270);
+        LoremIpsum.setBounds(560, 40, 710, 310);
 
         listLabel.setForeground(new java.awt.Color(204, 204, 204));
         listLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         listLabel.setText("LIST");
         jPanel2.add(listLabel);
-        listLabel.setBounds(660, 390, 430, 220);
+        listLabel.setBounds(570, 420, 680, 240);
 
         Link1.setText("CLICK ME!");
         Link1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(Link1);
-        Link1.setBounds(1040, 350, 200, 40);
+        Link1.setBounds(1020, 350, 220, 60);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/orangebg.png"))); // NOI18N
         jPanel2.add(jLabel6);
