@@ -68,9 +68,9 @@ public class frmTabletScreen extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jLabel5);
-        jLabel5.setBounds(700, 0, 30, 30);
+        jLabel5.setBounds(10, 3, 30, 30);
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tabbar.png"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tabba2r.png"))); // NOI18N
         jLabel11.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 jLabel11MouseDragged(evt);
@@ -82,15 +82,15 @@ public class frmTabletScreen extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jLabel11);
-        jLabel11.setBounds(-10, 0, 820, 30);
+        jLabel11.setBounds(-510, 0, 1310, 36);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Menu_Vertical_24px.png"))); // NOI18N
         jPanel3.add(jLabel10);
-        jLabel10.setBounds(730, 35, 24, 30);
+        jLabel10.setBounds(730, 41, 24, 30);
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_2_24px.png"))); // NOI18N
         jPanel3.add(jLabel12);
-        jLabel12.setBounds(700, 35, 24, 30);
+        jLabel12.setBounds(700, 41, 24, 30);
 
         jLabel13.setBackground(new java.awt.Color(204, 204, 204));
         jLabel13.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
@@ -99,7 +99,7 @@ public class frmTabletScreen extends javax.swing.JFrame {
         jLabel13.setText("https://loremipsumpbl3.com");
         jLabel13.setOpaque(true);
         jPanel3.add(jLabel13);
-        jLabel13.setBounds(10, 35, 680, 30);
+        jLabel13.setBounds(10, 41, 680, 30);
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setLayout(null);
